@@ -4,6 +4,7 @@ import ProtectedRouter from '@/app/ProtectedRouter';
 import HomePage from '@pages/HomePage';
 import SignUpPage from '@pages/SignUpPage';
 import SignInPage from '@pages/SignInPage';
+import MyPage from '@pages/MyPage';
 
 function App() {
   const AuthenticatedOnlyRoutes = [
@@ -17,7 +18,7 @@ function App() {
         {
           path: '',
           element: <ProtectedRouter />,
-          children: []
+          children: [{ path: '/my-page', element: <MyPage /> }]
         }
       ]
     },
