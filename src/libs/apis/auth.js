@@ -12,12 +12,22 @@ export const signIn = async (userData) => {
   return response.data;
 };
 
-export const getUser = async (userId) => {
-  const response = await axios.get(`${API_URL}/id:${userId}`);
+export const getUser = async (accessToken) => {
+  const response = await axios.get(`${API_URL}/user`, {
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${accessToken}`
+    }
+  });
   return response.data;
 };
 
-export const patchUserProfile = async (userData) => {
-  const response = await axios.patch(`${API_URL}/user`, userData);
+export const patchUserProfile = async (accessToken, nickname) => {
+  const response = await axios.patch(`${API_URL}/profile`, nickname, {
+    headers: {
+      'Content-Type': 'multipart/form-data',
+      Authorization: `Bearer ${accessToken}`
+    }
+  });
   return response.data;
 };

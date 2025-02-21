@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -12,8 +11,9 @@ export default defineConfig({
       { find: '@layouts', replacement: '/src/components/layouts' },
       { find: '@pages', replacement: '/src/pages' },
       { find: '@hooks', replacement: '/src/libs/hooks' },
-      { find: '@api', replacement: '/src/libs/api' },
-      { find: '@utils', replacement: '/src/libs/utils' }
+      { find: '@apis', replacement: '/src/libs/apis' },
+      { find: '@utils', replacement: '/src/libs/utils' },
+      { find: '@store', replacement: '/src/store' }
     ]
   }
 });
