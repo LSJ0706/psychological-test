@@ -1,18 +1,12 @@
 {
   "testResults": [
     {
-      "id": "a247",
-      "nickname": "닉네임",
-      "result": "MBTI 유형",
-      "visibility": true
-    },
-    {
-      "id": "6086",
-      "nickname": "닉네임",
-      "result": "MBTI 유형",
-      "visibility": {
-        "visibility": false
-      }
+      "id": "4241",
+      "nickname": "소금5",
+      "result": "ESTJ",
+      "visibility": true,
+      "data": "2025-02-23",
+      "userId": "zosksldhs@naver.com"
     }
   ]
 }
