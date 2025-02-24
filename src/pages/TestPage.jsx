@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TestForm from '@features/TestForm';
+import TestForm from '@features/tests/TestForm';
 import { calculateMBTI, mbtiDescriptions } from '@utils/mbtiCalculator';
 import { dateCalculator } from '@utils/dateCalculator';
 import { createTestResult } from '@apis/testResults';
@@ -24,7 +24,7 @@ const TestPage = () => {
       nickname: userInfo.nickname,
       result: mbtiResult,
       visibility: true,
-      data: dateCalculator(),
+      date: dateCalculator(),
       userId: userInfo.userId
     };
     testMutation.mutate(resultData);
@@ -32,7 +32,7 @@ const TestPage = () => {
   };
 
   const handleNavigateToResults = () => {
-    navigate('/results');
+    navigate('/result');
   };
 
   return (

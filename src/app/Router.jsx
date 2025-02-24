@@ -6,6 +6,7 @@ import SignUpPage from '@pages/SignUpPage';
 import SignInPage from '@pages/SignInPage';
 import MyPage from '@pages/MyPage';
 import TestPage from '@pages/TestPage';
+import ResultPage from '@pages/ResultPage';
 
 function App() {
   const AuthenticatedOnlyRoutes = [
@@ -15,6 +16,7 @@ function App() {
       element: <RootLayout />,
       children: [
         { path: '', element: <HomePage /> },
+        { path: '/result', element: <ResultPage /> },
         // ProtectedRouter 적용
         {
           path: '',

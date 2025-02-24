@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.button-blue {
+  @apply w-full py-3 mt-4 rounded-lg font-semibold transition duration-300 hover:bg-blue-600 text-white;
+}
+
+.button-red {
+  @apply w-full py-3 mt-4 rounded-lg font-semibold transition duration-300  hover:bg-red-600 text-white;
+}

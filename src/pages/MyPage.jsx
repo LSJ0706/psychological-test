@@ -1,23 +1,29 @@
 import React from 'react';
 import { getUser, patchUserProfile } from '@apis/auth';
-import { useMutation, useQuery } from '@tanstack/react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useAuthStore } from '../store/store';
 import Form from '@commons/Form';
+import { useEffect } from 'react';
 
 const MyPage = () => {
-  const { userInfo } = useAuthStore((state) => state);
+  const queryClient = useQueryClient();
+  const { userInfo, userNicknameUpdate } = useAuthStore((state) => state);
   const { data, isLoading } = useQuery({
     queryKey: ['userInfo', userInfo.token],
     queryFn: () => getUser(userInfo.token)
   });
 
   const changeNicknameMutation = useMutation({
-    mutationFn: (newNickname) => {
-      return patchUserProfile(userInfo.token, newNickname);
+    mutationFn: (newNickname) => patchUserProfile(userInfo.token, newNickname),
+    onSuccess: (_, newNickname) => {
+      alert('프로필 변경 성공!');
+      queryClient.invalidateQueries(['userInfo']);
+      userNicknameUpdate(newNickname.nickname);
     },
-    onSuccess: () => alert('프로필 변경 성공!'),
     onError: (error) => alert(error.response.data.message)
   });
+
+  useEffect(() => {}, [userInfo.nickname]);
 
   return (
     <div>
