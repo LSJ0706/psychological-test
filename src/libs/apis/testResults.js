@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/testResults';
+const API_URL = import.meta.env.VITE_PSYCHOLOGICAL_TEST + '/testResults';
 
 export const getTestResults = async () => {
   const response = await axios.get(API_URL);
+  console.log(response);
   return response.data;
 };
 
