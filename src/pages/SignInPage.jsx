@@ -1,12 +1,11 @@
-import React from 'react';
-import { signIn } from '@apis/auth';
-import Form from '@commons/Form';
-import { useMutation } from '@tanstack/react-query';
-import { useAuthStore } from '../store/store';
 import { useNavigate } from 'react-router-dom';
+import { useMutation } from '@tanstack/react-query';
+import { signIn } from '@apis/auth';
+import { useAuthStore } from '../store/store';
+import Form from '@commons/Form';
 
 const SignInPage = () => {
-  const { userSignIn } = useAuthStore((state) => state);
+  const userSignIn = useAuthStore((state) => state.userSignIn);
   const navigate = useNavigate();
 
   const signInMutation = useMutation({

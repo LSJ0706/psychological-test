@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
+import Button from './Button';
 
-const AuthForm = ({ title, inputs, buttonText, onSubmit }) => {
+const Form = ({ title, inputs, buttonText, onSubmit }) => {
   const [formData, setFormData] = useState(
     inputs.reduce(
       (acc, input) => ({
@@ -29,9 +30,9 @@ const AuthForm = ({ title, inputs, buttonText, onSubmit }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-4 border rounded-lg w-80">
-        <h2>{title}</h2>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-6 bg-white rounded-2xl shadow-lg w-96">
+        <h2 className="text-2xl font-bold text-center">{title}</h2>
         {inputs.map(({ name, type, placeholder }) => (
           <input
             key={name}
@@ -40,16 +41,18 @@ const AuthForm = ({ title, inputs, buttonText, onSubmit }) => {
             value={formData[name]}
             placeholder={placeholder}
             onChange={handleChange}
-            className="border"
+            className="w-full h-12 p-3 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
             required
           />
         ))}
-        <button type="submit" className="bg-purple-500 text-white p-2 rounded">
-          {buttonText}
-        </button>
+        <Button
+          name={buttonText}
+          type="submit"
+          className="w-full p-3 bg-purple-500 rounded-lg text-white rounded0lg hover:bg-purple-600 transition"
+        />
       </form>
     </div>
   );
 };
 
-export default AuthForm;
+export default Form;

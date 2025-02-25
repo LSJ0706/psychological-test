@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '@commons/Button';
 import { questions } from '@/data/questions';
 
 const TestForm = ({ onSubmit }) => {
@@ -47,12 +48,11 @@ const TestForm = ({ onSubmit }) => {
           </div>
         </div>
       ))}
-      <button
+      <Button
+        name="제출하기"
         type="submit"
-        className="w-full bg-primary-color text-white py-3 rounded-lg font-semibold hover:bg-primary-dark transition duration-300 hover:text-[#FF5A5F]"
-      >
-        제출하기
-      </button>
+        className="w-full px-2 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition"
+      />
     </form>
   );
 };

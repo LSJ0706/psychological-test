@@ -1,19 +1,13 @@
 import React from 'react';
-import { useAuthStore } from '../store/store';
-
-const home = () => {
-  const { userInfo, userSignOut } = useAuthStore((state) => state); // token 값 직접 가져오기
+import Button from '@commons/Button';
+import { useNavigate } from 'react-router-dom';
+const Home = () => {
+  const navigate = useNavigate();
   return (
     <div>
-      {userInfo.token ? (
-        <h1>
-          로그인 성공! <button onClick={() => userSignOut()}>로그아웃</button>
-        </h1>
-      ) : (
-        <h1>로그인 상태 아님</h1>
-      )}
+      <Button name="성격 유형 검사하기" onClick={() => navigate('/test')} />
     </div>
   );
 };
 
-export default home;
+export default Home;
