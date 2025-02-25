@@ -21,7 +21,6 @@
 ![캡처3](https://github.com/user-attachments/assets/3e51c129-7d4e-4ed9-bda4-efb490a18121)
 ![캡처4](https://github.com/user-attachments/assets/3414980c-e48a-4219-9b81-3fe2a39713b5)
 
-
 ### MBTI 테스트 화면
 ![캡처11](https://github.com/user-attachments/assets/cf5599d5-a3b6-4ed5-b81b-177928aa1dc9)
 ### MBTI 테스트 결과
@@ -63,7 +62,7 @@
 
 #### **Frontend** <br/>
 
-&emsp; <img src="https://img.shields.io/badge/React_18.3.1-087ea4?style=for-the-badge&logo=React&logoColor=white" alt="React"/> <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=000" alt="TypeScript"/> <img src="https://img.shields.io/badge/pnpm_10.3.0-F69220?style=for-the-badge&logo=pnpm&logoColor=fff" alt="PNPM" /> <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=flat-square&logo=Tailwind CSS&logoColor=white"/>
+&emsp; <img src="https://img.shields.io/badge/React_18.3.1-087ea4?style=for-the-badge&logo=React&logoColor=white" alt="React"/> <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=000" alt="TypeScript"/> <img src="https://img.shields.io/badge/pnpm_10.3.0-F69220?style=for-the-badge&logo=pnpm&logoColor=fff" alt="PNPM" /> <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=for-the-badge&logo=Tailwind CSS&logoColor=white" alt="Tailwind CSS"/>
 
 <br/>
 <br/>
@@ -107,4 +106,6 @@ $ pnpm dev
 
 ## 📃 트러블 슈팅
 https://velog.io/@leesj0706/%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-tailwind-%EB%B0%B0%EA%B2%BD-%EC%A0%81%EC%9A%A9
+
+
 https://velog.io/@leesj0706/%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85-%ED%81%B4%EB%A6%AD%EB%8F%84-%EC%95%88%ED%96%88%EB%8A%94%EB%8D%B0-%EC%99%9C
