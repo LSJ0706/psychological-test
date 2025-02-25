@@ -24,8 +24,15 @@ const SignInPage = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-12 bg-gray-100">
-      <Form title="로그인" inputs={inputs} buttonText="로그인" onSubmit={signInMutation.mutate} />
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-100 px-4">
+      <Form
+        title="로그인"
+        inputs={inputs}
+        buttonText="로그인"
+        onSubmit={signInMutation.mutate}
+        linkText="회원가입 하러 가기"
+        linkHref="/sign-up"
+      />
     </div>
   );
 };

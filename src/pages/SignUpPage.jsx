@@ -17,8 +17,15 @@ const SignUpPage = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-12 bg-gray-100">
-      <Form title="회원가입" inputs={inputs} buttonText="회원가입" onSubmit={signUpMutation.mutate} />
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-100 px-4 overflow-y: hidden;">
+      <Form
+        title="회원가입"
+        inputs={inputs}
+        buttonText="회원가입"
+        onSubmit={signUpMutation.mutate}
+        linkText="로그인 하러 가기"
+        linkHref="/sign-in"
+      />
     </div>
   );
 };

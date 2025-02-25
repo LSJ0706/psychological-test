@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import Button from './Button';
+import { Link } from 'react-router-dom';
 
-const Form = ({ title, inputs, buttonText, onSubmit }) => {
+const Form = ({ title, inputs, buttonText, onSubmit, linkText, linkHref }) => {
   const [formData, setFormData] = useState(
     inputs.reduce(
       (acc, input) => ({
@@ -31,10 +32,7 @@ const Form = ({ title, inputs, buttonText, onSubmit }) => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-4">
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-4 p-6 bg-white rounded-2xl shadow-lg w-full max-w-md md:max-w-lg lg:max-w-xl"
-      >
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-6 bg-white rounded-2xl shadow-lg w-96">
         <h2 className="text-2xl font-bold text-center">{title}</h2>
         {inputs.map(({ name, type, placeholder }) => (
           <input
@@ -53,6 +51,11 @@ const Form = ({ title, inputs, buttonText, onSubmit }) => {
           type="submit"
           className="w-full p-3 bg-purple-500 rounded-lg text-white rounded0lg hover:bg-purple-600 transition"
         />
+        {linkText && linkHref && (
+          <Link to={linkHref} className="text-purple-500 text-center">
+            {linkText}
+          </Link>
+        )}
       </form>
     </div>
   );

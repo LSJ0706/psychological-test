@@ -25,7 +25,7 @@ const MyPage = () => {
   });
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-12 bg-gray-100">
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-100 px-4 overflow-y:hidden;">
       {isLoading && <Loading />}
       {isError && <Error />}
       <Form
