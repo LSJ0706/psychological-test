@@ -76,6 +76,11 @@ $ pnpm install
 $ pnpm dev
 ```
 
+```sh
+//json server
+$ pnpm json-server db.json --port 5000
+```
+
 <br/>
 <br/>
 
