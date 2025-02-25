@@ -25,12 +25,12 @@ const MyPage = () => {
   });
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-12 bg-gray-100">
       {isLoading && <Loading />}
       {isError && <Error />}
       <Form
         title="마이페이지"
-        inputs={[{ name: 'nickname', type: 'text', value: data.nickname }]}
+        inputs={[{ name: 'nickname', type: 'text', value: userInfo.nickname }]}
         onSubmit={changeNicknameMutation.mutate}
         buttonText="닉네임 변경"
       />

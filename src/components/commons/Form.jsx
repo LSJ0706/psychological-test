@@ -30,8 +30,11 @@ const Form = ({ title, inputs, buttonText, onSubmit }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-6 bg-white rounded-2xl shadow-lg w-96">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-4">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-4 p-6 bg-white rounded-2xl shadow-lg w-full max-w-md md:max-w-lg lg:max-w-xl"
+      >
         <h2 className="text-2xl font-bold text-center">{title}</h2>
         {inputs.map(({ name, type, placeholder }) => (
           <input

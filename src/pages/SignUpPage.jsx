@@ -17,7 +17,7 @@ const SignUpPage = () => {
   ];
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-12 bg-gray-100">
       <Form title="회원가입" inputs={inputs} buttonText="회원가입" onSubmit={signUpMutation.mutate} />
     </div>
   );

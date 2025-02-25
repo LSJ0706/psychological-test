@@ -33,8 +33,8 @@ const TestResultItem = ({ result, userId }) => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto my-4 bg-gray-800 text-white p-6 rounded-xl shadow-lg">
-      <div className="flex justify-between item-center">
+    <div className="max-w-5xl w-full bg-gray-800 text-white p-4 md:p-6 rounded-xl shadow-lg my-4">
+      <div className="flex flex-col md:flex-row justify-between items-center">
         <span>{result.nickname}</span>
         <span>{result.date}</span>
       </div>
@@ -49,12 +49,7 @@ const TestResultItem = ({ result, userId }) => {
               className=" px-2 py-2 mx-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
               onClick={handleChangeVisibility}
             />
-            <Button
-              name="삭제"
-              type="button"
-              className="px-2 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
-              onClick={handleDeleteResult}
-            />
+            <Button name="삭제" type="button" onClick={handleDeleteResult} />
           </div>
         )}
       </div>
