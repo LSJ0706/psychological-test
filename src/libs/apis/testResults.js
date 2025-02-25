@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_PSYCHOLOGICAL_TEST + '/testResults';
+const API_URL = import.meta.env.VITE_PSYCHOLOGICAL_TEST;
 
 export const getTestResults = async () => {
   const response = await axios.get(API_URL);
